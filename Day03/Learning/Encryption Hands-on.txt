@@ -1,0 +1,3 @@
+What is OpenSSL?
+OpenSSL is a robust, full-featured, and widely used open-source toolkit for implementing Secure Sockets Layer (SSL) and Transport Layer Security (TLS) protocols. It is also a general-purpose cryptography library that enables secure communication and data encryption.
+

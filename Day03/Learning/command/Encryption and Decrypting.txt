@@ -1,0 +1,60 @@
+Encryption command:-
+Step-1(Run the Encryption command)
+openssl enc -aes-256-cbc -salt -in "File Name.txt" -out "File Name.txt"
+
+Step-2(Enter the Password)
+enter AES-256-CBC encryption password:
+
+Step-3(Verifying the Password)
+Verifying - enter AES-256-CBC encryption password:
+
+
+--Successful Encryption--
+OpenSSL will encrypt the file and create the output file (File Name_encrypted.txt).
+
+
+Password Guidelines
+Use a strong, unique password.
+Avoid simple or common passwords (e.g., "1234", "password").
+Store the password securely, as you'll need it to decrypt the file.
+
+
+------------------------------------------------------------------------
+Decrypting Command:-
+Step-1(Run the Decryption Command)
+openssl enc -aes-256-cbc -d -in "File Name_encrypted.txt" -out "File Name_encrypted.txt"
+
+Step-2(Enter the Password)
+enter AES-256-CBC decryption password:
+
+--Successful Decryption--
+OpenSSL will decryption the file and create the output file (File Name_decryted.txt).
+
+
+-------------------------------------------------------------------------
+IF
+Common Errors:-
+Step-1(If you enter the wrong password, you’ll see an error like this)
+bad decrypt
+34430000:error:06FFF064:digital envelope routines:EVP_DecryptFinal_ex:bad decrypt:../openssl-3.2.3/crypto/evp/evp_enc.c:604:
+
+-Ensure you're using the exact password from encryption.
+
+Step-2(File Not Found:
+If OpenSSL says it can't find the input file, verify its name and location:)
+dir
+
+
+-(or use the full path to the file)
+openssl enc -aes-256-cbc -d -in "C:\Full\Path\To\File Name_encrypted.txt" -out "C:\Full\Path\To\File Name_decrypted.txt"
+
+
+
+Example Session.
+
+C:\Users\YourName> openssl enc -aes-256-cbc -d -in "File Name_encrypted.txt" -out "Fie Name_decrypted.txt"
+enter AES-256-CBC decryption password: **********
+-After pressing Enter, the file will be decrypted, and the original content will be saved in File Name_decrypted.txt.
+
+------------------------------------------------------------------------------
+
